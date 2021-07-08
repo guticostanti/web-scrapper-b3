@@ -45,5 +45,10 @@ soup = BeautifulSoup(webpage, 'html.parser')
 
 
 p = soup.find_all("p", {"class": "texto-claro"})
+
+contador = 0
 for x in p:
-    print(x.text)
+    if contador <= 7:
+        print(x.text)
+        contador += 1
+
